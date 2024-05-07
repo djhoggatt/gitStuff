@@ -1,0 +1,21 @@
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[core]
+	editor = vim
+[help]
+	autocorrect = 20
+[submodule]
+	recurse = false
+[alias]
+	graph = log --graph --all --decorate --oneline
+	cleanup = ! git branch -d `git branch --merged | grep -v \\*`
+	stat = log --stat
+	pup = !git restore . ; git restore --recurse-submodules . ; git pull ; git pull --all ; ; git submodule init ; git submodule update ; git submodule status ; git status
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
